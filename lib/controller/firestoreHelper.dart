@@ -43,8 +43,6 @@ class FirestoreHelper {
 
   }
 
-
-
   //ajouter un utilisateur
 addUser(String uid , Map<String,dynamic> map){
     cloudUsers.doc(uid).set(map);

@@ -1,6 +1,3 @@
-
-
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ipssi_bd23_2/controller/constante.dart';
 
@@ -14,61 +11,49 @@ class Utilisateur {
   List? favoris;
   String? pseudo;
 
-
   String get fullName {
     return prenom + " " + nom;
   }
 
   //constructeur
- Utilisateur.vide(){
+  Utilisateur.vide() {
     uid = "";
-    nom ="";
+    nom = "";
     prenom = "";
     email = "";
- }
+  }
 
- Utilisateur(DocumentSnapshot snapshot){
+  Utilisateur(DocumentSnapshot snapshot) {
     uid = snapshot.id;
-    Map<String,dynamic> map = snapshot.data() as Map<String,dynamic>;
+    Map<String, dynamic> map = snapshot.data() as Map<String, dynamic>;
     nom = map["NOM"];
     prenom = map["PRENOM"];
     email = map["EMAIL"];
     String? provisoireTel = map["TELEPHONE"];
-    if(provisoireTel == null){
+    if (provisoireTel == null) {
       telephone = "";
+    } else {
+      telephone = provisoireTel;
     }
-    else
-      {
-        telephone = provisoireTel;
-      }
     String? provisoireAvatar = map["AVATAR"];
-    if(provisoireAvatar == null){
+    if (provisoireAvatar == null) {
       avatar = defaultImage;
+    } else {
+      avatar = provisoireAvatar;
     }
-    else
-      {
-        avatar = provisoireAvatar;
-      }
     List? provisoirFavoris = map["FAVORIS"];
-    if(provisoirFavoris == null){
+    if (provisoirFavoris == null) {
       favoris = [];
+    } else {
+      favoris = provisoirFavoris;
     }
-    else
-      {
-        favoris = provisoirFavoris;
-      }
     String? provisoirePseudo = map["PSEUDO"];
-    if(provisoirePseudo == null){
+    if (provisoirePseudo == null) {
       pseudo = "";
+    } else {
+      pseudo = provisoirePseudo;
     }
-    else
-      {
-        pseudo = provisoirePseudo;
-      }
+  }
 
- }
-
-
-
-
+  get about => null;
 }
