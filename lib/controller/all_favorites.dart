@@ -95,9 +95,9 @@ class _AllFavoritesState extends State<AllFavorites> {
               trailing: IconButton(
                 onPressed: () {},
                 icon: const Icon(
-                  Icons.arrow_forward_ios,
+                  Icons.message_outlined,
                   color: Color.fromARGB(255, 95, 127, 255),
-                  size: 18,
+                  size: 25,
                 ),
               ),
             ),
