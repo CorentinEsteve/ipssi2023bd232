@@ -64,4 +64,21 @@ updateUser(String uid, Map<String,dynamic> map){
   }
 
 
+  //envoyer un message entre deux utilisateurs
+  sendMessage(String uid, String autreUid, String message){
+    Map<String,dynamic> map = {
+      "MESSAGE":message,
+      "DATE":DateTime.now(),
+      "UID":uid,
+      "AUTRE_UID":autreUid,
+    };
+    cloudMessages.add(map);
+  }
+
+  //recuperer tout les messages
+  getMessages()
+  {
+    return cloudMessages.orderBy("DATE",descending: true).snapshots();
+  }
+
 }

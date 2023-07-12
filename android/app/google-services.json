@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "821482329687",
-    "project_id": "ipssi2023bd232",
-    "storage_bucket": "ipssi2023bd232.appspot.com"
+    "project_number": "87427743284",
+    "project_id": "ipssi2023-7ad45",
+    "storage_bucket": "ipssi2023-7ad45.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:821482329687:android:9ee25e789b99f0525cf512",
+        "mobilesdk_app_id": "1:87427743284:android:3faf93b2c2e36d1f579461",
         "android_client_info": {
           "package_name": "com.example.ipssi_bd23_2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "821482329687-9mh2not8higu86bp7osv97vj5jcthre8.apps.googleusercontent.com",
+          "client_id": "87427743284-f6h78q5h4bdk73npm8rjkislnlh3jd1u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDECQVAI7TMDL1B9Eif52-NHlZdXOfTIiU"
+          "current_key": "AIzaSyBxAiMlYVAM79km4JSDZ36nEtSNjzaI2ms"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "821482329687-9mh2not8higu86bp7osv97vj5jcthre8.apps.googleusercontent.com",
+              "client_id": "87427743284-f6h78q5h4bdk73npm8rjkislnlh3jd1u.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "87427743284-5ng659ddco7irtn17dbt59qfq05dvm65.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ipssiBd232"
+              }
             }
           ]
         }

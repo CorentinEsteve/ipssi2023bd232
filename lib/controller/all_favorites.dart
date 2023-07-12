@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ipssi_bd23_2/controller/constante.dart';
 import 'package:ipssi_bd23_2/controller/firestoreHelper.dart';
 import 'package:ipssi_bd23_2/model/utilisateur.dart';
+import 'package:ipssi_bd23_2/controller/messages.dart';
 
 class AllFavorites extends StatefulWidget {
   const AllFavorites({Key? key}) : super(key: key);
@@ -63,15 +64,6 @@ class _AllFavoritesState extends State<AllFavorites> {
                           user.telephone ?? "Téléphone",
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        Align(
-                          alignment: Alignment.center,
-                          child: TextButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: Text("Fermer"),
-                          ),
-                        ),
                       ],
                     ),
                   ),
@@ -93,7 +85,12 @@ class _AllFavoritesState extends State<AllFavorites> {
               title: Text(user.fullName ?? "Nom"),
               subtitle: Text(user.email, textAlign: TextAlign.start),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => MessagerieView(autrePersonne: user)));
+                },
                 icon: const Icon(
                   Icons.message_outlined,
                   color: Color.fromARGB(255, 95, 127, 255),
