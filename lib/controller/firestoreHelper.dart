@@ -6,6 +6,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:ipssi_bd23_2/model/utilisateur.dart';
 
+import '../model/message.dart';
+
 class FirestoreHelper {
   //attributs
   final auth = FirebaseAuth.instance;
@@ -64,21 +66,21 @@ updateUser(String uid, Map<String,dynamic> map){
   }
 
 
-  //envoyer un message entre deux utilisateurs
+  //envoyer un message entre deux utilisateurs avec un id qui es
   sendMessage(String uid, String autreUid, String message){
     Map<String,dynamic> map = {
       "MESSAGE":message,
       "DATE":DateTime.now(),
       "UID":uid,
       "AUTRE_UID":autreUid,
+      "ID_CONVERSATION":"$uid-$autreUid",
     };
     cloudMessages.add(map);
   }
 
-  //recuperer tout les messages
-  getMessages()
-  {
-    return cloudMessages.orderBy("DATE",descending: true).snapshots();
+  //récuperer les messages entre deux utilisateurs avec un ID_CONVERSATION
+  getMessages(String uid, String autreUid){
+  String idConversation = "$uid-$autreUid";
+  return cloudMessages.where("ID_CONVERSATION",isEqualTo: idConversation).orderBy("DATE").snapshots().map((event) => event.docs.map((e) => Message(e)).toList());
   }
-
 }
