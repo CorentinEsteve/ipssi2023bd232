@@ -1,37 +1,37 @@
 {
   "project_info": {
-    "project_number": "87427743284",
-    "project_id": "ipssi2023-7ad45",
-    "storage_bucket": "ipssi2023-7ad45.appspot.com"
+    "project_number": "728623125675",
+    "project_id": "flutter-ipssi",
+    "storage_bucket": "flutter-ipssi.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:87427743284:android:3faf93b2c2e36d1f579461",
+        "mobilesdk_app_id": "1:728623125675:android:1d9521b449411fa1c893ee",
         "android_client_info": {
           "package_name": "com.example.ipssi_bd23_2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "87427743284-f6h78q5h4bdk73npm8rjkislnlh3jd1u.apps.googleusercontent.com",
+          "client_id": "728623125675-qleg1vj45v50ik7fd3bq8q5u0ncotgub.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBxAiMlYVAM79km4JSDZ36nEtSNjzaI2ms"
+          "current_key": "AIzaSyCxgMrgokrorq_6CaBm8m-yzY4gfl574Us"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "87427743284-f6h78q5h4bdk73npm8rjkislnlh3jd1u.apps.googleusercontent.com",
+              "client_id": "728623125675-qleg1vj45v50ik7fd3bq8q5u0ncotgub.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "87427743284-5ng659ddco7irtn17dbt59qfq05dvm65.apps.googleusercontent.com",
+              "client_id": "728623125675-3ienhjb1id7stkhuflemcuu9num6hg11.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.ipssiBd232"

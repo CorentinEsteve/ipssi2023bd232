@@ -13,9 +13,8 @@ class Message {
     uid = snapshot.id;
     Map<String, dynamic> map = snapshot.data() as Map<String, dynamic>;
     message = map["MESSAGE"];
-    date = map["DATE"];
+    date = (snapshot['DATE'] as Timestamp).toDate().toString();
     uidUser = map["AUTRE_UID"];
     idConversation = map["ID_CONVERSATION"];
   }
-
 }

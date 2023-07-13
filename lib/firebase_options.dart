@@ -44,40 +44,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCUhRENDANaLkefkmwswhyZdy0XmWAcWR0',
-    appId: '1:87427743284:web:21e349bc5fce7f8f579461',
-    messagingSenderId: '87427743284',
-    projectId: 'ipssi2023-7ad45',
-    authDomain: 'ipssi2023-7ad45.firebaseapp.com',
-    storageBucket: 'ipssi2023-7ad45.appspot.com',
-    measurementId: 'G-TS24CTG91V',
+    apiKey: 'AIzaSyCoPyzzuxnVtdCRiN0doF2swEd7rWCUe3Q',
+    appId: '1:728623125675:web:3f4235424401dfd6c893ee',
+    messagingSenderId: '728623125675',
+    projectId: 'flutter-ipssi',
+    authDomain: 'flutter-ipssi.firebaseapp.com',
+    storageBucket: 'flutter-ipssi.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBxAiMlYVAM79km4JSDZ36nEtSNjzaI2ms',
-    appId: '1:87427743284:android:3faf93b2c2e36d1f579461',
-    messagingSenderId: '87427743284',
-    projectId: 'ipssi2023-7ad45',
-    storageBucket: 'ipssi2023-7ad45.appspot.com',
+    apiKey: 'AIzaSyCxgMrgokrorq_6CaBm8m-yzY4gfl574Us',
+    appId: '1:728623125675:android:1d9521b449411fa1c893ee',
+    messagingSenderId: '728623125675',
+    projectId: 'flutter-ipssi',
+    storageBucket: 'flutter-ipssi.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAeC96BSAgLqj3_ZF8B6E8O-C2Gi7qT3Lo',
-    appId: '1:87427743284:ios:f0f0ec934d34b101579461',
-    messagingSenderId: '87427743284',
-    projectId: 'ipssi2023-7ad45',
-    storageBucket: 'ipssi2023-7ad45.appspot.com',
-    iosClientId: '87427743284-5ng659ddco7irtn17dbt59qfq05dvm65.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDS-wctMcWN8NgaA9MPtcTuIKJIc5qAU-E',
+    appId: '1:728623125675:ios:ee70a7ce51b874a8c893ee',
+    messagingSenderId: '728623125675',
+    projectId: 'flutter-ipssi',
+    storageBucket: 'flutter-ipssi.appspot.com',
+    iosClientId: '728623125675-3ienhjb1id7stkhuflemcuu9num6hg11.apps.googleusercontent.com',
     iosBundleId: 'com.example.ipssiBd232',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAeC96BSAgLqj3_ZF8B6E8O-C2Gi7qT3Lo',
-    appId: '1:87427743284:ios:f0f0ec934d34b101579461',
-    messagingSenderId: '87427743284',
-    projectId: 'ipssi2023-7ad45',
-    storageBucket: 'ipssi2023-7ad45.appspot.com',
-    iosClientId: '87427743284-5ng659ddco7irtn17dbt59qfq05dvm65.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDS-wctMcWN8NgaA9MPtcTuIKJIc5qAU-E',
+    appId: '1:728623125675:ios:ee70a7ce51b874a8c893ee',
+    messagingSenderId: '728623125675',
+    projectId: 'flutter-ipssi',
+    storageBucket: 'flutter-ipssi.appspot.com',
+    iosClientId: '728623125675-3ienhjb1id7stkhuflemcuu9num6hg11.apps.googleusercontent.com',
     iosBundleId: 'com.example.ipssiBd232',
   );
 }
