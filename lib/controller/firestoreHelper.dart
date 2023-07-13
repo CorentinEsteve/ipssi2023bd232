@@ -82,6 +82,7 @@ class FirestoreHelper {
   getMessage(String uid, String autreUid) {
     String idConversation =
         (uid.compareTo(autreUid) < 0) ? "$uid-$autreUid" : "$autreUid-$uid";
+    print(idConversation);
     return cloudMessages
         .where("ID_CONVERSATION", isEqualTo: idConversation)
         .orderBy("DATE", descending: true)

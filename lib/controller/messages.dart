@@ -65,17 +65,21 @@ class _MessagerieViewState extends State<MessagerieView> {
                     print(snapshot.data);
                     print(snapshot.runtimeType);
                     return ListView.builder(
+                      reverse: true, // Set reverse to true
                       itemCount: messages.length,
                       itemBuilder: (context, index) {
                         Message message = messages[index];
                         return Container(
-                          padding: const EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0,
+                              vertical: 5.0), // Adjust the padding
                           child: Row(
                             mainAxisAlignment: message.uidUser == moi.uid
-                                ? MainAxisAlignment.end
-                                : MainAxisAlignment.start,
+                                ? MainAxisAlignment.start
+                                : MainAxisAlignment.end,
                             children: [
                               Container(
+                                width: MediaQuery.of(context).size.width * 0.6,
                                 padding: const EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
                                   color: message.uidUser == moi.uid
@@ -83,18 +87,21 @@ class _MessagerieViewState extends State<MessagerieView> {
                                       : Colors.grey[300],
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(message.message),
-                                    const SizedBox(
-                                      height: 5.0,
-                                    ),
-                                    Text(
-                                      message.date,
-                                      style: const TextStyle(fontSize: 10.0),
-                                    ),
-                                  ],
+                                child: Flexible(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(message.message),
+                                      const SizedBox(
+                                          height:
+                                              2.0), // Adjust the SizedBox height
+                                      Text(
+                                        message.date,
+                                        style: const TextStyle(fontSize: 10.0),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
