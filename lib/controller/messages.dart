@@ -47,15 +47,21 @@ class _MessagerieViewState extends State<MessagerieView> {
           children: [
             Flexible(
               child: StreamBuilder<List<Message>>(
-                stream: FirestoreHelper().getMessages(widget.autrePersonne.uid, moi.uid),
+                stream: FirestoreHelper().getMessage(widget.autrePersonne.uid, moi.uid),
                 builder: (context, snapshot) {
                   if(snapshot.hasError){
+                    print(snapshot.runtimeType);
+                    print(snapshot);
                     return const Center(child: Text("Erreur de connexion"),);
                   }
                   if(snapshot.connectionState == ConnectionState.waiting){
-                    return const Center(child: CircularProgressIndicator(),);
+                    return const Center(child:Text("attente de co"),);
                   }
                   List<Message> messages = snapshot.data ?? [];
+                  print(messages.length);
+                  print(messages.runtimeType);
+                  print(snapshot.data);
+                  print(snapshot.runtimeType);
                   return ListView.builder(
                     itemCount: messages.length,
                     itemBuilder: (context, index) {

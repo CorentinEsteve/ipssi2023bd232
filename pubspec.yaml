@@ -45,6 +45,7 @@ dependencies:
   permission_handler:
   geolocator:
   google_maps_flutter:
+  flutter_chat_ui: ^1.6.9
 
 dev_dependencies:
   flutter_test:

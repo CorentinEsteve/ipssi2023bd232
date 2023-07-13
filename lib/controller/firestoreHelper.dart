@@ -78,9 +78,8 @@ updateUser(String uid, Map<String,dynamic> map){
     cloudMessages.add(map);
   }
 
-  //récuperer les messages entre deux utilisateurs avec un ID_CONVERSATION
-  getMessages(String uid, String autreUid){
-  String idConversation = "$uid-$autreUid";
-  return cloudMessages.where("ID_CONVERSATION",isEqualTo: idConversation).orderBy("DATE").snapshots().map((event) => event.docs.map((e) => Message(e)).toList());
+  //fait un getter pour les messages entre deux utilisateurs
+  getMessage(String uid, String autreUid){
+    return cloudMessages.where("ID_CONVERSATION",isEqualTo: "$uid-$autreUid").orderBy("DATE",descending: true).snapshots().map((event) => event.docs.map((e) => Message(e)).toList());
   }
 }

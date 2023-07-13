@@ -9,23 +9,13 @@ class Message {
   late String uidUser;
   late String idConversation;
 
-
-  Message.vide() {
-    uid = "";
-    message = "";
-    date = "";
-    uidUser = "";
-    idConversation = "";
-  }
-
   Message(DocumentSnapshot snapshot) {
     uid = snapshot.id;
     Map<String, dynamic> map = snapshot.data() as Map<String, dynamic>;
     message = map["MESSAGE"];
     date = map["DATE"];
-    uidUser = map["UIDUSER"];
+    uidUser = map["AUTRE_UID"];
     idConversation = map["ID_CONVERSATION"];
   }
 
- get about => null;
 }
